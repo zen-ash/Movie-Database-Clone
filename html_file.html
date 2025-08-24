@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ash‑FLIX</title>
+  <!-- Netflix‑style display font approximation -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="visually-hidden">Skip to content</a>
+  <header>
+    <nav aria-label="Primary">
+      <div class="logo" tabindex="0" aria-label="Ash‑FLIX home"><span>Ash‑FLIX</span></div>
+      <ul class="nav-links">
+        <li><a href="#trending">Trending</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#shows">TV Shows</a></li>
+        <li><a href="#genres">Genres</a></li>
+        <li><a href="#watchlist">Watchlist</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="search-section" aria-labelledby="search-heading">
+    <h2 id="search-heading" class="visually-hidden">Search</h2>
+    <div class="search-container">
+      <form id="searchForm" autocomplete="off">
+        <label for="searchInput" class="visually-hidden">Search for movies, TV shows, actors</label>
+        <input id="searchInput" class="search-box" placeholder="Search for movies, TV shows, actors…" aria-label="Search for movies, TV shows, actors" />
+        <button class="search-btn" type="submit" aria-label="Search">
+          <svg width="20" height="20" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+      </form>
+    </div>
+    <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filter by genre">
+      <button type="button" class="filter-tab" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-tab" data-filter="action" aria-pressed="false">Action</button>
+      <button type="button" class="filter-tab" data-filter="comedy" aria-pressed="false">Comedy</button>
+      <button type="button" class="filter-tab" data-filter="drama" aria-pressed="false">Drama</button>
+      <button type="button" class="filter-tab" data-filter="horror" aria-pressed="false">Horror</button>
+      <button type="button" class="filter-tab" data-filter="scifi" aria-pressed="false">Sci‑Fi</button>
+    </div>
+  </section>
+
+  <main id="main" class="container">
+    <section id="trending" aria-labelledby="trending-title">
+      <h2 class="section-title" id="trending-title">Trending Now</h2>
+      <div class="movie-grid" id="trendingGrid"></div>
+    </section>
+    <div class="loading" id="loading" aria-live="polite">
+      <div class="loading-spinner" role="status" aria-label="Loading"></div>
+      <p style="margin-top:.75rem;color:var(--text-dim)">Loading amazing content…</p>
+    </div>
+    <section id="movies" aria-labelledby="movies-title">
+      <h2 class="section-title" id="movies-title">Popular Movies</h2>
+      <div class="movie-grid" id="moviesGrid"></div>
+    </section>
+    <section id="shows" aria-labelledby="shows-title">
+      <h2 class="section-title" id="shows-title">Popular Series</h2>
+      <div class="movie-grid" id="showsGrid"></div>
+    </section>
+  </main>
+
+  <button class="fab" id="toTopBtn" aria-label="Scroll to top" title="Scroll to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
