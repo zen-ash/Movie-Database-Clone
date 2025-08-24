@@ -3,8 +3,6 @@
 A Netflix-style **catalog UI** built with vanilla **HTML, CSS, and JavaScript**.  
 _For learning/demo purposes. Not affiliated with Netflix._
 
-**Live:** https://zen-ash.github.io/ash-flix  
-**Code:** https://github.com/Zen-ash/ash-flix
 
 
 ## Features
